@@ -113,4 +113,10 @@ article{
     width: 50vh;
     background-color: white;
     box-shadow: 2px 2px 4px #000000;
+    display: grid;
+    grid-template-rows: 16;
+    grid-template-columns: 16;
+}
+.styleSquares{
+    border: 1px solid black;
 }
