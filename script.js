@@ -1,6 +1,7 @@
 let state = {
     rowsAndCollumns : 16,
-    currentColor: '#000000'
+    currentColor: '#000000',
+    mode: 'color'
 };
 
 
@@ -12,7 +13,7 @@ document.querySelector('#slider').addEventListener('change', (event) => {
 })
 
 document.querySelector('#drawingContainer').addEventListener('click', (event) => {
-    console.log(event.target.id)
+    document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
 })
 
 
@@ -43,7 +44,11 @@ function RenderSquares(){
 
 RenderSquares();
 
-
+function Rainbow(){
+    let colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3'];
+    let random = Math.floor(Math.random() * (7 - 1)) + 0;
+    state.currentColor = colors[random];
+}
 
 
 function uniqueid(){
