@@ -34,6 +34,16 @@ article{
     background-color: rgb(51, 50, 50);
     border-radius: 50%;
 }
+.color-picker:hover{
+    height: calc(10vh + 10px);
+    width: calc(10vh + 10px);
+    transition: all 0.15s ease-in;
+}
+.color-picker:not(:hover){
+    height: 10vh;
+    width: 10vh;
+    transition: all 0.15s ease-in;
+}
 .setting-elements{
     display: flex;
     flex-direction: column;
