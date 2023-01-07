@@ -15,7 +15,9 @@
         </header>
         <article>
             <div class="setting-elements" id="setting-elements">
-                <div class="color-picker" id="color-picker"></div>
+                <div class="some-container">
+                    <div class="color-picker" id="color-picker"></div>
+                </div>
                 <div class="buttons" id="buttons">
                     <button class="color-mode btn" id="colorMode">Color mode</button>
                     <button class="rainbow-mode btn" id="rainbowMode">Rainbow mode</button>
@@ -24,8 +26,7 @@
                 </div>
                 <div class="size-slider" id="sizeSlider">
                     <p class="size"></p>
-                    <div class="slider"></div>
-                    <div class="pointer"></div>
+                    <input type="range" value="16" min="1" max="64" class="slider"></div>
                 </div>
             </div>
             <div class="drawing-container" id="drawingContainer">
