@@ -91,6 +91,7 @@ article{
 .slider{
     background-color: var(--color-darkblue);
     width: 20vw;
+    height: 10px;
     border-radius: 20px;
     cursor: pointer;
     -webkit-appearance: none;
