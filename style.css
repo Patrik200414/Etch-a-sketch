@@ -118,3 +118,7 @@ article{
 .styleSquare{
     border: 1px solid black;
 }
+.size{
+    display: flex;
+    justify-content: center;
+}
