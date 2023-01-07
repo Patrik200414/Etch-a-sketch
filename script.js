@@ -5,6 +5,8 @@ let state = {
 };
 
 
+document.querySelector('.size').textContent = `${document.querySelector('#slider').value} X ${document.querySelector('#slider').value}`;
+
 
 document.querySelector('#slider').addEventListener('change', (event) => {
     state.rowsAndCollumns = event.target.value;
