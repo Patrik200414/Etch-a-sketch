@@ -1,7 +1,7 @@
 let state = {
     rowsAndCollumns : 16,
     currentColor: '#000000',
-    mode: 'rainbow'
+    mode: 'erase'
 };
 
 
@@ -16,8 +16,12 @@ document.querySelector('#drawingContainer').addEventListener('click', (event) =>
     if(state.mode === 'color'){
         state.currentColor = '#000000';
         document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
-    }else{
+    }else if(state.mode === 'rainbow'){
         Rainbow();
+        document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+    }
+    else if(state.mode === 'erase'){
+        state.currentColor = '#ffffff';
         document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
     }
     
