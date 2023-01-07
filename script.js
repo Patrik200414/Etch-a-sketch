@@ -1,7 +1,7 @@
 let state = {
     rowsAndCollumns : 16,
     currentColor: '#000000',
-    mode: 'erase'
+    mode: 'color'
 };
 
 
@@ -12,7 +12,29 @@ document.querySelector('#slider').addEventListener('change', (event) => {
     state.rowsAndCollumns = event.target.value;
     document.querySelector('.size').textContent = `${event.target.value} X ${event.target.value}`
     RenderSquares();
+});
+
+
+document.querySelector('#colorMode').addEventListener('click', () => {
+    state.mode = 'color';
+    document.querySelector('#colorMode').classList.replace('btn-chosen');
+    document.querySelector('#rainbowMode').classList.replace('btn');
+    document.querySelector('#erase').classList.replace('btn');
 })
+document.querySelector('#erase').addEventListener('click', () => {
+    state.mode = 'erase';
+    document.querySelector('#erase').classList.replace('btn-chosen');
+    document.querySelector('#rainbowMode').classList.replace('btn');
+    document.querySelector('#colorMode').classList.replace('btn');
+})
+document.querySelector('#rainbowMode').addEventListener('click', () => {
+    state.mode = 'rainbow';
+    document.querySelector('#rainbowMode').classList.replace('btn-chosen');
+    document.querySelector('#colorMode').classList.replace('btn');
+    document.querySelector('#erase').classList.replace('btn');
+})
+
+
 
 document.querySelector('#drawingContainer').addEventListener('click', (event) => {
     if(state.mode === 'color'){
