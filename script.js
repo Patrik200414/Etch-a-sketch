@@ -1,7 +1,7 @@
 let state = {
     rowsAndCollumns : 16,
     currentColor: '#000000',
-    mode: 'color'
+    mode: 'rainbow'
 };
 
 
@@ -13,7 +13,14 @@ document.querySelector('#slider').addEventListener('change', (event) => {
 })
 
 document.querySelector('#drawingContainer').addEventListener('click', (event) => {
-    document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+    if(state.mode === 'color'){
+        state.currentColor = '#000000';
+        document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+    }else{
+        Rainbow();
+        document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+    }
+    
 })
 
 
