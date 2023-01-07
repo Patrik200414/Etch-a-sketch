@@ -4,9 +4,18 @@ let state = {
 
 
 
+document.querySelector('#slider').addEventListener('change', (event) => {
+    state.rowsAndCollumns = event.target.value;
+    RenderSquares();
+})
+
 
 
 function RenderSquares(){
+    let divToAppend = document.querySelector('#drawingContainer');
+    let table = document.createElement('table');
+    table.setAttribute('class', 'grid-container');
+    table.setAttribute('id', 'gridContainer')
     for(let i = 0;i<state.rowsAndCollumns;i++){
         let tr = document.createElement('tr');
         for(let j= 0;j<state.rowsAndCollumns;j++){
@@ -14,8 +23,16 @@ function RenderSquares(){
             td.setAttribute('class', 'styleSquare');
             tr.append(td)
         }
-        document.querySelector('#gridContainer').append(tr);
+        table.append(tr);
     }
+
+    if(divToAppend.childElementCount === 0){
+        divToAppend.append(table);
+    }
+    else{
+        divToAppend.replaceChildren(table)
+    }
+    
 }
 
 RenderSquares();
