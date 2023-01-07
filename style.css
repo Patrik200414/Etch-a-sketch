@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --color-darkblue: rgb(27, 27, 50);
+}
 body{
     font-family: 'Courier New', Courier, monospace;
+    color: var(--color-darkblue);
 }
 header{
     padding: 4vh;
