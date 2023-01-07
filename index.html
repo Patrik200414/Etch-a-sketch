@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Etch-a-sketch</h1>
+        </header>
+        <article>
+            <div class="setting-elements" id="setting-elements">
+                <div class="color-picker" id="color-picker"></div>
+                <div class="buttons" id="buttons">
+                    <button class="color-mode btn" id="colorMode">Color mode</button>
+                    <button class="rainbow-mode btn" id="rainbowMode">Rainbow mode</button>
+                    <button class="erase btn" id="erase">Erase</button>
+                    <button class="clear btn" id="clear">Clear</button>
+                </div>
+                <div class="size-slider" id="sizeSlider">
+                    <p class="size"></p>
+                    <div class="slider"></div>
+                    <div class="pointer"></div>
+                </div>
+            </div>
+            <div class="drawing-container" id="drawingContainer">
+                <div class="grid-container" id="gridContainer">
+
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="footer-container">
+                <p>Check out my <a target="_blank" href="https://github.com/Patrik200414">GitHub <i class="fa fa-github"></i></a> page </p>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
