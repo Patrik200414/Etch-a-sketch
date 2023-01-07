@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 :root{
@@ -20,4 +19,31 @@ header{
     header{
         font-size: 4vw;
     }
+}
+
+
+article{
+    height: 75vh;
+    display: flex;
+    padding: 4vh;
+}
+.color-picker{
+    height: 10vh;
+    width: 10vh;
+    background-color: rgb(51, 50, 50);
+    border-radius: 50%;
+}
+.setting-elements{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 35%;
+    row-gap: 7vh;
+    align-items: center;
+    padding: 2vh;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
 }
