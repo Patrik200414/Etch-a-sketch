@@ -6,3 +6,14 @@
 body{
     font-family: 'Courier New', Courier, monospace;
 }
+header{
+    padding: 4vh;
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+}
+@media (max-width: 1000px) {
+    header{
+        font-size: 4vw;
+    }
+}
