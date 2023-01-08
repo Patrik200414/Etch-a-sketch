@@ -15,23 +15,37 @@ document.querySelector('#slider').addEventListener('change', (event) => {
 });
 
 
-document.querySelector('#colorMode').addEventListener('click', () => {
+
+
+document.querySelector('#colorMode').addEventListener('click', (event) => {
     state.mode = 'color';
-    document.querySelector('#colorMode').classList.replace('btn-chosen');
-    document.querySelector('#rainbowMode').classList.replace('btn');
-    document.querySelector('#erase').classList.replace('btn');
+    document.querySelector('#colorMode').classList.add('btn-chosen');
+    if(document.querySelector('#rainbowMode').classList.contains('btn-chosen') === true){
+        document.querySelector('#rainbowMode').classList.remove('btn-chosen');
+    }
+    if(document.querySelector('#erase').classList.contains('btn-chosen') === true){
+        document.querySelector('#erase').classList.remove('btn-chosen');
+    }
 })
-document.querySelector('#erase').addEventListener('click', () => {
-    state.mode = 'erase';
-    document.querySelector('#erase').classList.replace('btn-chosen');
-    document.querySelector('#rainbowMode').classList.replace('btn');
-    document.querySelector('#colorMode').classList.replace('btn');
-})
-document.querySelector('#rainbowMode').addEventListener('click', () => {
+document.querySelector('#rainbowMode').addEventListener('click', (event) => {
     state.mode = 'rainbow';
-    document.querySelector('#rainbowMode').classList.replace('btn-chosen');
-    document.querySelector('#colorMode').classList.replace('btn');
-    document.querySelector('#erase').classList.replace('btn');
+    document.querySelector('#rainbowMode').classList.add('btn-chosen');
+    if(document.querySelector('#colorMode').classList.contains('btn-chosen') === true){
+        document.querySelector('#colorMode').classList.remove('btn-chosen');
+    }
+    if(document.querySelector('#erase').classList.contains('btn-chosen') === true){
+        document.querySelector('#erase').classList.remove('btn-chosen');
+    }
+})
+document.querySelector('#erase').addEventListener('click', (event) => {
+    state.mode = 'erase';
+    document.querySelector('#erase').classList.add('btn-chosen');
+    if(document.querySelector('#rainbowMode').classList.contains('btn-chosen') === true){
+        document.querySelector('#rainbowMode').classList.remove('btn-chosen');
+    }
+    if(document.querySelector('#colorMode').classList.contains('btn-chosen') === true){
+        document.querySelector('#colorMode').classList.remove('btn-chosen');
+    }
 })
 
 
