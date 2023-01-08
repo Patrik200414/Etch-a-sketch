@@ -23,8 +23,11 @@ header{
    
 }
 @media (max-width: 820px) {
+    body{
+        overflow-x: hidden;
+    }
     main{
-        height: 200vh;
+        height: 180vh;
     }
     article{
         display: flex;
@@ -33,9 +36,21 @@ header{
         justify-content: center;
         height: 100vh;
     }
+    .setting-elements{
+        transform: translateY(105%);
+        margin-left: 55%;
+    }
+    .drawing-container{
+        width: 100%;
+        transform: translateX(-70%);
+    }
+    footer{
+        position: absolute;
+        transform: translateY(80vh);
+    }
 }
-@media (max-width: 683px) {
-   
+@media (max-width: 600px) {
+
     
 }
 
