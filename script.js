@@ -62,15 +62,22 @@ document.querySelector('#erase').addEventListener('click', (event) => {
 
 document.querySelector('#drawingContainer').addEventListener('click', (event) => {
     if(state.mode === 'color'){
-        state.currentColor = '#000000';
-        document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+        if(event.target.className !== 'drawing-container'){
+            state.currentColor = '#000000';
+            document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+        }
+        
     }else if(state.mode === 'rainbow'){
-        Rainbow();
-        document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+        if(event.target.className !== 'drawing-container'){
+            Rainbow();
+            document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+        }
     }
     else if(state.mode === 'erase'){
-        state.currentColor = '#ffffff';
-        document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+        if(event.target.className !== 'drawing-container'){
+            state.currentColor = '#ffffff';
+            document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
+        }
     }
     
 })
