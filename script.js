@@ -17,6 +17,16 @@ document.querySelector('#slider').addEventListener('change', (event) => {
 
 
 
+//clear button
+document.querySelector('#clear').addEventListener('click', () => {
+    let td = document.querySelectorAll('.styleSquare');
+    for(let item of td){
+        item.style.backgroundColor = '#ffffff';
+    }
+})
+
+
+
 document.querySelector('#colorMode').addEventListener('click', (event) => {
     state.mode = 'color';
     document.querySelector('#colorMode').classList.add('btn-chosen');
