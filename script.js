@@ -71,7 +71,7 @@ document.querySelector('#drawingContainer').addEventListener('mouseover', (event
     if(state.mouseDown === true){
         if(state.mode === 'color'){
             if(event.target.className !== 'drawing-container'){
-                state.currentColor = '#000000';
+                state.currentColor = document.querySelector('#color-picker').value;
                 document.getElementById(event.target.id).style.backgroundColor = state.currentColor;
             }
             
