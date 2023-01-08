@@ -68,7 +68,6 @@ document.querySelector('#drawingContainer').addEventListener('mouseup', () => {
 
 
 document.querySelector('#drawingContainer').addEventListener('mouseover', (event) => {
-    console.log(event.type);
     if(state.mouseDown === true){
         if(state.mode === 'color'){
             if(event.target.className !== 'drawing-container'){
