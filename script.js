@@ -1,7 +1,8 @@
 let state = {
     rowsAndCollumns : 16,
     currentColor: '#000000',
-    mode: 'color'
+    mode: 'color',
+    mouseDown: false
 };
 
 
@@ -58,10 +59,17 @@ document.querySelector('#erase').addEventListener('click', (event) => {
     }
 })
 
+document.querySelector('#drawingContainer').addEventListener('mousedown', () => {
+    state.mouseDown = true;
+});
+document.querySelector('#drawingContainer').addEventListener('mouseup', () => {
+    state.mouseDown = false;
+})
 
 
 document.querySelector('#drawingContainer').addEventListener('mouseover', (event) => {
-    if(event.altKey){
+    console.log(event.type);
+    if(state.mouseDown === true){
         if(state.mode === 'color'){
             if(event.target.className !== 'drawing-container'){
                 state.currentColor = '#000000';
