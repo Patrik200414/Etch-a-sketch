@@ -37,10 +37,8 @@ article{
     flex-direction: row;
 }
 .color-picker{
-    height: 10vh;
-    width: 10vh;
-    background-color: rgb(51, 50, 50);
-    border-radius: 50%;
+    -webkit-appearance: none;
+    border: none;
 }
 .color-picker:hover{
     height: calc(10vh + 10px);
