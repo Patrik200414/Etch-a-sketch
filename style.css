@@ -91,7 +91,9 @@ article{
     height: 5vh;
     width: 12vw;
 }
-
+button{
+    cursor: pointer;
+}
 
 
 .btn-chosen{
